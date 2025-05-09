@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+TV Show to Spotify Playlist Generator
+A web application that generates custom Spotify playlists based on TV shows. Simply enter your favorite TV show, and our AI will create a playlist of 5 songs that match the show's mood, era, and themes.
+Features
 
-## Getting Started
+Search for any TV show
+AI-powered song recommendations based on show characteristics
+Spotify integration for playback and playlist saving
+Responsive and animated UI
 
-First, run the development server:
+Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+React with Next.js
+Tailwind CSS for styling
+Framer Motion for animations
+Spotify Web API
+OpenAI API for recommendations
+TMDB API for TV show information
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Getting Started
+Prerequisites
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Node.js 18+ and npm
+Spotify Developer Account
+OpenAI API Key
+TMDB API Key
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Installation
 
-## Learn More
+Clone the repository
+bashgit clone https://github.com/yourusername/spotify-tv-matcher.git
+cd spotify-tv-matcher
 
-To learn more about Next.js, take a look at the following resources:
+Install dependencies
+bashnpm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create a .env.local file in the root directory with the following variables:
+SPOTIFY_CLIENT_ID=your_spotify_client_id
+SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+SPOTIFY_REDIRECT_URI=http://localhost:3000/api/auth/callback/spotify
+NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=http://localhost:3000
+OPENAI_API_KEY=your_openai_api_key
+TMDB_API_KEY=your_tmdb_api_key
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Run the development server
+bashnpm run dev
 
-## Deploy on Vercel
+Open http://localhost:3000 in your browser
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+API Setup
+Spotify API
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Go to Spotify Developer Dashboard
+Create a new application
+Set the redirect URI to http://localhost:3000/api/auth/callback/spotify
+Copy the Client ID and Client Secret to your .env.local file
+
+OpenAI API
+
+Get your API key from OpenAI
+Add it to your .env.local file
+
+TMDB API
+
+Create an account on TMDB
+Go to settings > API and request an API key
+Add it to your .env.local file
+
+Usage
+
+Sign in with your Spotify account
+Search for a TV show
+View the generated playlist
+Play songs directly or save the playlist to your Spotify account
+
+License
+MIT
+Acknowledgments
+
+Spotify Web API
+OpenAI
+The Movie Database (TMDB)
